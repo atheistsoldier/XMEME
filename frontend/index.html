@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>XMEME</title>
+    <meta name="description" content="meme collection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAA+fEkAO4FMADd/SQA8gUwAJE01ADh/SQAbGR8AHR4iABYVGQD9/f0AIxcjADJFlwA8ckgAHCMyACAvJwD///8AMkiQAB4mMgD4+PgAMEN4ADOBSQA3RpQANV1CAEI/RAD6+voA8/PzAD18TAAgJCcAPIJNADp/TAA/gFEAHCAhABoJGgD+/v4AhICFABMbFgBAhU0ANnJEADx+TQAzgkQAOnVLADiDSQA3dEYAOoJLAEJ9TwA8gU0AGRoeACAdHwA+gU0AVUxJADAvMQA7fkwAeHZ8ABchKgAuLDAAGyUiADFLjAA4g0gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8iHQEBAQEBAQwPDw8PDyABAQECAQEBHBQEGy8PDyEBAQEBEBAQEA0LFTg1Dw8WAQEBAREQEAABAQEBORMPNgEBAQEBAQEBAQEBAQE0Dw8BAQEBAQEBJAEBLR8wDw8PDgEBAQEBMCwBNwEBAQUPDw8BAQEKMRghLg8PBgcIMg8PCQEBARoqAQEpAQEDAQ8PDw8XAQEBASYeAQEBARIPDw8PDwEBKCUnIwEBAQ8PDw8PDw8PMwEBKxkBAQkPDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+      rel="icon"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/bg.css" />
+  </head>
+  <body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1">XMEME</span>
+    </nav>
+    <!--animation-->
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    <div id="title">
+      <div class="form-group">
+        <form class="form" id="myForm">
+          <div class="form-wrapper">
+            <div class="stream">
+              <h1>Meme stream</h1>
+            </div>
+
+            <div class="form-row">
+              <label for="owner">Meme Owner</label> <br />
+              <input
+                class="form-control"
+                id="caption"
+                type="text"
+                name="name"
+                placeholder="owner"
+                autocomplete="off"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <label for="caption">Caption</label> <br />
+              <input
+                class="form-control"
+                id="caption"
+                type="text"
+                name="caption"
+                placeholder="caption"
+                autocomplete="off"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <label for="url">Meme url</label> <br />
+              <input
+                class="form-control"
+                id="url"
+                type="url"
+                name="url"
+                placeholder="url"
+                autocomplete="off"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <button class="button" type="submit">
+                <span class="submit">Submit</span>
+                <span class="loading"><i class="fa fa-refresh"></i></span>
+                <span class="check"><i class="fa fa-check"></i></span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="meme-list" id="memes"></div>
+    </div>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div class="footer-padding">
+      <div class="footer">
+        <p class="Copyright">© 2021 Subhadip Maji.</p>
+      </div>
+    </div>
+  </body>
+
+  <script src="jquery-3.5.1.min.js"></script>
+
+  <script src="index.js" async defer></script>
+</html>
